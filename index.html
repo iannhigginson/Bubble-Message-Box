@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+
+ <script type="text/javascript" src="./js/msgBox.js" defer></script>
+
+ <script>
+
+  const msgText = '' +
+   '<table style="margin-left:auto;margin-right:auto;">' +
+   '<tr>' +
+   '<td><input id="input1" /></td>' +
+   '<td><input id="input2" /></td>' +
+   '</tr>' +
+   '<tr>' +
+   '<td colspan="2"><button style="margin-left:auto;margin-right:auto;" onclick="goDoThis()">Go</button></td>' +
+   '</tr>' +
+   '</table>';
+
+  function doMsgBox() {
+   showMsgBox("<h3>This is the Header</h3>", msgText);
+  }
+
+  function goDoThis() {
+   let one = document.getElementById('input1');
+   let two = document.getElementById('input2');
+   console.log("input1 => " + one.value + " input2 => " + two.value);
+  }
+
+ </script>
+
+</head>
+
+<body>
+ <button onclick="doMsgBox()">Go</button>
+ <p>This is default content</p>
+ <p>Lorem ipsum dolor sit amet euismod, tempus rhoncus, elit bibendum, ex sem sem, ligula mattis venenatis massa imperdiet.
+ Leo maecenas pulvinar, enim porta, praesent. Posuere, donec commodo, morbi sapien nulla enim pulvinar, lacus leo, duis
+ pretium mi, condimentum fringilla, nisi.</p>
+ 
+ <p>Arcu, nunc, nunc ultricies nam auctor dictumst tincidunt vestibulum class hac at, magna nulla, enim, felis interdum.
+ Ornare congue, dui fermentum odio, amet, non duis nostra, volutpat, sed quam. Et, tortor integer mauris finibus
+ himenaeos nisl tellus, eu, taciti enim, primis posuere, volutpat ac, pretium quam, iaculis. Dictumst mi dignissim dictum
+ magna, eleifend rhoncus, semper ante. Enim, massa posuere sem nulla, orci. Nam eu aliquam aptent finibus, commodo orci
+ sagittis egestas maximus consequat sit finibus venenatis. Ligula, interdum feugiat, sodales massa, hac sit nulla, eu,
+ hendrerit rutrum ac, malesuada. Mollis aenean mattis nisi, luctus, platea.</p>
+ 
+ <p>Porttitor magna lobortis porta, imperdiet varius viverra eget sem, integer himenaeos interdum mi fermentum tellus
+ faucibus consequat placerat nisi. Malesuada eu, cras nullam phasellus finibus leo fames non vel, sit porttitor, semper
+ nam fringilla purus lacus. Nostra, tellus congue, platea cursus, ornare pharetra. Arcu condimentum sagittis, volutpat
+ dictum id rhoncus, fringilla ac posuere, efficitur arcu, nostra, lacinia, suscipit. Dictumst proin sagittis auctor,
+ quisque sed, lorem, eleifend sagittis, erat, arcu, erat vulputate nunc suscipit posuere dapibus pulvinar turpis. Commodo
+ sit ullamcorper bibendum, fermentum tristique inceptos pulvinar, blandit, lacus integer auctor mollis quis orci, eget
+ diam. Conubia lacinia, taciti feugiat neque felis hendrerit odio ligula, aliquet sem massa laoreet, luctus, pulvinar,
+ ante, tempor, nulla, erat. Vel condimentum sem, inceptos diam dapibus imperdiet dignissim adipiscing et, aliquam metus.</p>
+ <button onclick="doMsgBox()">Go</button>
+ <p>Habitasse quis, volutpat, vel pulvinar fringilla, nulla dignissim commodo class sollicitudin amet volutpat id dui.
+ Tempor auctor, ac nec morbi praesent duis ligula nisi, porta, elit rhoncus, dui finibus consectetur. Interdum aptent
+ convallis varius, tortor, accumsan et. Cursus, luctus, iaculis quam tempor, eleifend tincidunt interdum. Fusce a,
+ maximus urna sapien volutpat, tincidunt purus. Vivamus lacinia eget interdum est adipiscing sem sit.</p>
+ 
+ <p>Elementum mi, molestie odio iaculis eros, ullamcorper in, vitae. Eros, id, amet, tortor fusce diam ex, conubia aliquet
+ et, quis, nullam posuere fringilla, rhoncus, mattis leo, aenean sociosqu. Neque mi, dui, pharetra sollicitudin nisi.
+ Semper urna, diam ullamcorper cursus, quis, odio, pharetra mi, vestibulum torquent commodo at fringilla, convallis.
+ Auctor justo ut leo, arcu, vestibulum faucibus erat, elementum nunc congue pretium tortor, fermentum. Phasellus
+ efficitur suscipit nunc, tortor, sagittis, cras orci, sem ligula, class nullam magna, lectus, vivamus euismod. Efficitur
+ praesent quis orci, convallis sed, posuere, varius, id, sagittis ex, consectetur ex tincidunt lobortis primis mi enim.
+ Sem, amet id, congue, nostra, ultricies venenatis metus tellus eros, nisi habitasse in non amet, torquent. Habitasse
+ quis, vestibulum pulvinar eros diam lacinia, donec amet, id.</p>
+ 
+ <p>Blandit in nibh sollicitudin volutpat vivamus. Nostra, rhoncus eros, massa, hendrerit convallis eu, lacinia tellus
+ fermentum velit vitae, mi, turpis ac, magna, euismod. Ac, ex, eros sapien dictumst tempor, neque urna, venenatis vivamus
+ dui. Metus lacus fermentum est auctor scelerisque nec tortor ullamcorper conubia nunc, inceptos tincidunt eu placerat,
+ sapien. Nibh luctus volutpat fames vitae, ex, euismod, elit. Integer hendrerit nostra, quam, sed, habitasse. Euismod
+ pharetra luctus, id felis quam, lectus. Feugiat, proin pharetra rhoncus, nisl dolor, turpis aenean metus mi luctus,
+ integer mollis placerat, maximus arcu. Quis pharetra porttitor, velit dignissim rhoncus.</p>
+<button onclick="doMsgBox()">Go</button>
+ <p>Feugiat, eu volutpat eros lectus, eget habitasse enim commodo, placerat massa bibendum viverra suspendisse ultrices.
+ Tempor, eleifend, ultrices, himenaeos consequat habitasse in taciti ultricies diam non, porta arcu vestibulum. Maecenas
+ quis, suscipit ex, tincidunt lectus orci, malesuada donec adipiscing eros, placerat eu, tellus, quam. Nullam sapien
+ morbi adipiscing rhoncus, convallis et, auctor porttitor, cursus.</p>
+ 
+ <p>Nibh nostra, a, phasellus fames a torquent eros inceptos quisque iaculis elit euismod, interdum, quis purus. Lacinia,
+ quisque urna fringilla, per eu semper interdum varius, vulputate amet. Laoreet tortor, orci, dictumst amet quisque
+ mattis, ante ullamcorper curabitur in, lacus urna dui, euismod, venenatis interdum, luctus, et. Finibus risus hac
+ ultricies lectus aptent semper dolor, augue ullamcorper. Ex, luctus, tempor pulvinar, placerat etiam eu suscipit rhoncus
+ mi risus. In euismod, augue eleifend laoreet, enim per tempor et, elit scelerisque interdum, nullam porttitor, congue,
+ sem finibus pulvinar, feugiat. Posuere arcu fames sociosqu odio neque mattis iaculis lorem ac, nisl elementum ornare
+ sodales vivamus.</p>
+ 
+ <p>Ultrices nec iaculis congue vel, primis fames conubia tortor, urna elit, tempor, facilisis. Vulputate fusce proin ad
+ nostra, ex, torquent non, mattis arcu, vestibulum lacus non eu ullamcorper est rhoncus, nisl justo. Luctus, et ipsum
+ sollicitudin posuere eros elit porttitor, et, quisque. Habitasse efficitur fringilla est condimentum maximus vitae proin
+ conubia class nibh, felis facilisis lacinia ornare vel, tortor, duis. Non pulvinar, ut lorem per lacus scelerisque duis
+ efficitur vestibulum euismod porta diam. Molestie maximus luctus nibh accumsan etiam ipsum felis sapien laoreet egestas
+ convallis dolor quisque rhoncus, lacinia, nec. Habitasse felis duis odio praesent finibus, vitae, cursus. Posuere
+ adipiscing orci posuere, feugiat varius commodo justo taciti risus nec mauris blandit per. Volutpat, tortor erat amet,
+ justo varius blandit laoreet euismod laoreet, elit eu dolor.</p>
+ <button onclick="doMsgBox()">Go</button>
+ <p>Phasellus suscipit lacus blandit, fusce cursus fermentum. Nulla ligula varius viverra ante. At blandit maecenas
+ ultrices, pretium eros, sit felis aliquam. Euismod, mauris sagittis blandit, cursus, per lacus porttitor, lorem erat.
+ Scelerisque porta, ullamcorper mollis amet nostra, felis leo, imperdiet commodo. In, ultrices, amet auctor, orci
+ dictumst ligula lacinia, augue iaculis cras et. Magna, elit, non, magna habitasse etiam vel, praesent lectus nisi.
+ Lectus, est libero pulvinar, sed class non, habitasse imperdiet quam sollicitudin quis, a ante purus hac ipsum nisi
+ accumsan.</p>
+
+</body>
+
+</html>

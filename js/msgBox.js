@@ -4,9 +4,8 @@
  * Ian Neal Higginson.
  */
 
-function showMsgBox(hed: string, msg: string) {
-
- const msgBox = document.createElement("div");
+function showMsgBox(hed, msg) {
+ var msgBox = document.createElement("div");
  msgBox.id = "msgBox";
  msgBox.style.backgroundColor = "#575757";
  msgBox.style.color = "white";
@@ -20,17 +19,14 @@ function showMsgBox(hed: string, msg: string) {
  msgBox.style.position = "fixed";
  msgBox.style.top = "10px";
  msgBox.style.left = "25%";
-
- const removemsgBox = () => {
-  const existingmsgBox = document.getElementById(msgBox.id);
+ var removemsgBox = function () {
+  var existingmsgBox = document.getElementById(msgBox.id);
   if (existingmsgBox && existingmsgBox.parentElement) {
    existingmsgBox.parentElement.removeChild(existingmsgBox);
   }
  };
-
  removemsgBox();
-
- const closeButton = document.createElement("a");
+ var closeButton = document.createElement("a");
  msgBox.appendChild(closeButton);
  closeButton.textContent = "X";
  closeButton.style.backgroundColor = "#000000";
@@ -43,23 +39,17 @@ function showMsgBox(hed: string, msg: string) {
  closeButton.style.padding = "3px";
  closeButton.style.position = "reletive";
  closeButton.style.top = "3px";
-
-
- closeButton.onclick = () => {
+ closeButton.onclick = function () {
   removemsgBox();
  };
-
- const msgBoxHeader = document.createElement("header");
+ var msgBoxHeader = document.createElement("header");
  msgBox.appendChild(msgBoxHeader);
  msgBoxHeader.innerHTML = hed;
  msgBoxHeader.style.marginLeft = "auto";
  msgBoxHeader.style.marginRight = "auto";
  msgBoxHeader.style.textAlign = "center";
-
- const message = document.createElement("section");
+ var message = document.createElement("section");
  msgBox.appendChild(message);
  message.innerHTML = '<hr /><br />' + msg;
-
  document.body.appendChild(msgBox);
-
 }
