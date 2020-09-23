@@ -1,0 +1,23 @@
+{
+  "name": "msgbox",
+  "version": "1.0.0",
+  "description": "Web page plugin for custome bubbel dialogs",
+  "main": "msgBox.js",
+  "dependencies": {
+    "typescript": "^4.1.0-dev.20200921"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "msgBox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "msgBox"
+  },
+  "keywords": [
+    "Custom",
+    "dialog"
+  ],
+  "author": "Ian Neal Higginson",
+  "license": "MIT"
+}
