@@ -1,93 +1,96 @@
 /**
- * @package msgBox.js
- * @version 1.1.100122.0900
- * @date 10/01/2022 09:00
+ * @package MessageBox.js
+ * @version 1.1.100122.1015
+ * @date 10/01/2022 10:15
  * @author Ian Neal Higginson.
  */
 
-function showMsgBox(hed, msg) {
- /**
-  *# The message box
-  */
- var msgBox = document.createElement("div");
- msgBox.id = "msgBox";
- msgBox.style.backgroundColor = "#575757";
- msgBox.style.color = "white";
- msgBox.style.border = "1px solid black";
- msgBox.style.borderRadius = "5px";
- msgBox.style.boxShadow = "2px 2px 2px 1px #272727";
- msgBox.style.padding = "10px";
- msgBox.style.marginBottom = "auto";
- msgBox.style.marginLeft = "auto";
- msgBox.style.marginRight = "auto";
- msgBox.style.marginTop = "auto";
- msgBox.style.position = "fixed";
- msgBox.style.top = "10px";
- msgBox.style.left = "5%";
- msgBox.style.width = "90%";
- msgBox.style.height = "90%";
+ function msgBox(hed, msg) {
+  /**
+   *# The message box
+   */
+  const MessageBox = document.createElement("div");
+  MessageBox.id = "MessageBox";
+  MessageBox.style.backgroundColor = "#575757";
+  MessageBox.style.color = "white";
+  MessageBox.style.border = "1px solid black";
+  MessageBox.style.borderRadius = "5px";
+  MessageBox.style.boxShadow = "2px 2px 2px 1px #272727";
+  MessageBox.style.padding = "10px";
+  MessageBox.style.marginBottom = "auto";
+  MessageBox.style.marginLeft = "auto";
+  MessageBox.style.marginRight = "auto";
+  MessageBox.style.marginTop = "auto";
+  MessageBox.style.position = "fixed";
+  MessageBox.style.top = "10px";
+  MessageBox.style.left = "5%";
+  MessageBox.style.width = "90%";
+  MessageBox.style.height = "90%";
 
- /**
-  *# Remove message box method
-  */
- var removemsgBox = () => {
-  var existingmsgBox = document.getElementById(msgBox.id);
-  if (existingmsgBox && existingmsgBox.parentElement) {
-   existingmsgBox.parentElement.removeChild(existingmsgBox);
-  }
- };
- removemsgBox();
+  /**
+   *# Remove message box method
+   */
+  const removeMessageBox = () => {
+   const existingMessageBox = document.getElementById(MessageBox.id);
+   if (existingMessageBox && existingMessageBox.parentElement) {
+    existingMessageBox.parentElement.removeChild(existingMessageBox);
+   }
+  };
+  removeMessageBox();
 
- /**
-  *# Remove message box button
-  */
- var closeButton = document.createElement("a");
- closeButton.textContent = "X";
- closeButton.style.backgroundColor = "#ff0000";
- closeButton.style.border = "#ffffff solid thin";
- closeButton.style.borderRadius = "5px";
- closeButton.style.color = "#ffffff";
- closeButton.style.cursor = "pointer";
- closeButton.style.float = "right";
- closeButton.style.fontWeight = "bold";
- closeButton.style.padding = "10px";
- closeButton.style.position = "relative";
- closeButton.style.top = "1px";
- closeButton.style.zIndex = "1000";
- closeButton.onclick = () => {
-  removemsgBox();
- };
+  /**
+   *# Remove message box button
+   */
+  const closeButton = document.createElement("span");
+  closeButton.id = "MessageBoxCloseButton";
+  closeButton.textContent = "X";
+  closeButton.style.backgroundColor = "#ff0000";
+  closeButton.style.border = "#ffffff solid thin";
+  closeButton.style.borderRadius = "5px";
+  closeButton.style.color = "#ffffff";
+  closeButton.style.cursor = "pointer";
+  closeButton.style.float = "right";
+  closeButton.style.fontWeight = "bold";
+  closeButton.style.padding = "10px";
+  closeButton.style.position = "relative";
+  closeButton.style.top = "1px";
+  closeButton.style.zIndex = "1000";
+  closeButton.onclick = () => {
+   removeMessageBox();
+  };
 
- /**
-  *# Message box header
-  */
- var msgBoxHeader = document.createElement("header");
- msgBoxHeader.innerHTML = hed;
- msgBoxHeader.style.marginLeft = "auto";
- msgBoxHeader.style.marginRight = "auto";
- msgBoxHeader.style.textAlign = "center";
+  /**
+   *# Message box header
+   */
+  const MessageBoxHeader = document.createElement("header");
+  MessageBoxHeader.id = "MessageBoxHeader";
+  MessageBoxHeader.innerHTML = hed;
+  MessageBoxHeader.style.marginLeft = "auto";
+  MessageBoxHeader.style.marginRight = "auto";
+  MessageBoxHeader.style.textAlign = "center";
 
- /**
-  *# The message container
-  */
- var message = document.createElement("section");
- message.innerHTML = "<hr /><br />" + msg;
+  /**
+   *# The message container
+   */
+  const message = document.createElement("section");
+  message.id = "MessageBoxContentContainer";
+  message.innerHTML = "<hr /><br />" + msg;
 
- /**
-  *# Put it all togeather
-  *! In this order please!
-  */
- msgBox.appendChild(closeButton);
- msgBox.appendChild(msgBoxHeader);
- msgBox.appendChild(message);
+  /**
+   *# Put it all togeather
+   *! In this order please!
+   */
+  MessageBox.appendChild(closeButton);
+  MessageBox.appendChild(MessageBoxHeader);
+  MessageBox.appendChild(message);
 
- /**
-  *# Stick it to the document
-  */
- document.body.appendChild(msgBox);
+  /**
+   *# Stick it to the document
+   */
+  document.body.appendChild(MessageBox);
 
- /**
-  *# Focus on the message box
-  */
- msgBox.focus();
-}
+  /**
+   *# Focus on the message box
+   */
+  MessageBox.focus();
+ }
