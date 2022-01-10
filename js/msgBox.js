@@ -1,7 +1,7 @@
 /**
  * @package MessageBox.js
- * @version 1.1.100122.1015
- * @date 10/01/2022 10:15
+ * @version 1.1.100122.1343
+ * @date 10/01/2022 13:43
  * @author Ian Neal Higginson.
  */
 
@@ -74,7 +74,7 @@
    */
   const message = document.createElement("section");
   message.id = "MessageBoxContentContainer";
-  message.innerHTML = "<hr /><br />" + msg;
+  message.innerHTML = `<hr /><br />${msg}`;
 
   /**
    *# Put it all togeather
