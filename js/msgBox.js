@@ -39,7 +39,8 @@
   removeMessageBox();
 
   /**
-   *# Remove message box button
+   *# Close button
+   *! Calls removeMessageBox()
    */
   const closeButton = document.createElement("span");
   closeButton.id = "MessageBoxCloseButton";
